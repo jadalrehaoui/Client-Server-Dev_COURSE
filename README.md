@@ -51,7 +51,7 @@ Then in AnimalShelter __init__ I connected python to mongodb as such
 ```
 class AnimalShelter(object):
     def __init__(self, username, password):
-        self.client = MongoClient('mongodb://%s:%s@localhost:47040/AAC' % (username, password))
+        self.client = MongoClient('mongodb://%s:%s@localhost:27017/AAC' % (username, password))
         self.database = self.client['AAC']
         try:
             x = dumps(self.database.animals.find_one())
